@@ -10,12 +10,23 @@ import Foundation
 
 final class Character {
     let name: String
-    let alias: String
     let house: House
+    private let _alias: String?
     
-    init(name: String, alias: String, house: House) {
+    var alias: String {
+        get {
+            if let _alias = _alias  {
+                // Existe y está en _alias
+                return _alias
+            } else {
+                return ""
+            }
+        }
+    }
+    
+    init(name: String, alias: String?, house: House) {
         self.name = name
-        self.alias = alias
+        _alias = alias
         self.house = house
     }
 }
