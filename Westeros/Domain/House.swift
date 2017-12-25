@@ -8,5 +8,18 @@
 
 import Foundation
 
-typealias House = String
+typealias Sigil = String
+typealias Words = String
+
+final class House {
+    let name: String
+    let sigil: Sigil
+    let words: Words
+    
+    init(name: String, sigil: Sigil, words: Words) {
+        self.name = name
+        self.sigil = sigil
+        self.words = words
+    }
+}
 

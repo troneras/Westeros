@@ -21,7 +21,7 @@ class HouseTests: XCTestCase {
     }
     
     func testHouseExistence() {
-        let stark = House()
+        let stark = House(name: "Stark", sigil: "Huargo", words: "¡Se acerca el invierno!")
         XCTAssertNotNil(stark)
     }
 }
