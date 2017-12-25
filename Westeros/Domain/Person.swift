@@ -15,12 +15,17 @@ final class Person {
     
     var alias: String {
         return _alias ?? ""
-    }
+    } 
     
     init(name: String, alias: String? = nil, house: House) {
         self.name = name
         _alias = alias
         self.house = house
     }
-    
+}
+
+extension Person {
+    var fullName: String {
+        return "\(name) \(house.name)"
+    }
 }

@@ -14,11 +14,13 @@ class PersonTests: XCTestCase {
     
     var starkHouse: House!
     var starkSigil: Sigil!
+    var ned: Person!
     
     override func setUp() {
         super.setUp()
         starkSigil = Sigil(image: UIImage(), description: "Lobo huargo")
         starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno")
+        ned = Person(name: "Eddard", alias: "Ned", house: starkHouse)
     }
     
     override func tearDown() {
@@ -27,8 +29,10 @@ class PersonTests: XCTestCase {
     }
     
     func testCharacterEcistence() {
-        let ned = Person(name: "Eddard", alias: "Ned", house: starkHouse)
         XCTAssertNotNil(ned)
     }
     
+    func testFullName() {
+        XCTAssertEqual(ned.fullName, "Eddard Stark")
+    }
 }
