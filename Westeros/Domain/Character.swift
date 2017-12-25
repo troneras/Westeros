@@ -23,5 +23,11 @@ final class Character {
         self.house = house
     }
     
+    init(name: String, house: House) {
+        self.name = name
+        self.house = house
+        _alias = nil 
+    }
+    
     
 }
