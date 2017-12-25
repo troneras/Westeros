@@ -14,14 +14,7 @@ final class Character {
     private let _alias: String?
     
     var alias: String {
-        get {
-            if let _alias = _alias  {
-                // Existe y está en _alias
-                return _alias
-            } else {
-                return ""
-            }
-        }
+        return _alias ?? ""
     }
     
     init(name: String, alias: String, house: House) {
