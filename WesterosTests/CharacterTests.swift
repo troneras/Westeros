@@ -12,9 +12,13 @@ import XCTest
 
 class CharacterTests: XCTestCase {
     
+    var starkHouse: House!
+    var starkSigil: Sigil!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        starkSigil = Sigil(image: UIImage(), description: "Lobo huargo")
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno")
     }
     
     override func tearDown() {
@@ -23,8 +27,8 @@ class CharacterTests: XCTestCase {
     }
     
     func testCharacterEcistence() {
-        let character = Character()
-        XCTAssertNotNil(character)
+        let ned = Character(name: "Eddard", alias: "Ned", house: starkHouse)
+        XCTAssertNotNil(ned)
     }
     
 }

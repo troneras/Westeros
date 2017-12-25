@@ -8,4 +8,14 @@
 
 import Foundation
 
-typealias Character = String
+final class Character {
+    let name: String
+    let alias: String
+    let house: House
+    
+    init(name: String, alias: String, house: House) {
+        self.name = name
+        self.alias = alias
+        self.house = house
+    }
+}
