@@ -12,8 +12,8 @@
 		4B7F243A1FF105AB00EB3D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7F24381FF105AB00EB3D94 /* LaunchScreen.storyboard */; };
 		4B7F24501FF10CCD00EB3D94 /* HouseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F244F1FF10CCD00EB3D94 /* HouseTests.swift */; };
 		4B7F24521FF10D6C00EB3D94 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F24511FF10D6C00EB3D94 /* House.swift */; };
-		4B7F24551FF1137C00EB3D94 /* CharacterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F24541FF1137C00EB3D94 /* CharacterTests.swift */; };
-		4B7F24571FF113B900EB3D94 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F24561FF113B900EB3D94 /* Character.swift */; };
+		4B7F24551FF1137C00EB3D94 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F24541FF1137C00EB3D94 /* PersonTests.swift */; };
+		4B7F24571FF113B900EB3D94 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F24561FF113B900EB3D94 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +36,8 @@
 		4B7F24461FF105AC00EB3D94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4B7F244F1FF10CCD00EB3D94 /* HouseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseTests.swift; sourceTree = "<group>"; };
 		4B7F24511FF10D6C00EB3D94 /* House.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
-		4B7F24541FF1137C00EB3D94 /* CharacterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterTests.swift; sourceTree = "<group>"; };
-		4B7F24561FF113B900EB3D94 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		4B7F24541FF1137C00EB3D94 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
+		4B7F24561FF113B900EB3D94 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,7 +93,7 @@
 			children = (
 				4B7F24461FF105AC00EB3D94 /* Info.plist */,
 				4B7F244F1FF10CCD00EB3D94 /* HouseTests.swift */,
-				4B7F24541FF1137C00EB3D94 /* CharacterTests.swift */,
+				4B7F24541FF1137C00EB3D94 /* PersonTests.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -102,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				4B7F24511FF10D6C00EB3D94 /* House.swift */,
-				4B7F24561FF113B900EB3D94 /* Character.swift */,
+				4B7F24561FF113B900EB3D94 /* Person.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B7F24571FF113B900EB3D94 /* Character.swift in Sources */,
+				4B7F24571FF113B900EB3D94 /* Person.swift in Sources */,
 				4B7F24521FF10D6C00EB3D94 /* House.swift in Sources */,
 				4B7F24301FF105AB00EB3D94 /* AppDelegate.swift in Sources */,
 			);
@@ -221,7 +221,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B7F24501FF10CCD00EB3D94 /* HouseTests.swift in Sources */,
-				4B7F24551FF1137C00EB3D94 /* CharacterTests.swift in Sources */,
+				4B7F24551FF1137C00EB3D94 /* PersonTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

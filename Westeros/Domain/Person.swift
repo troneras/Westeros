@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class Character {
+final class Person {
     let name: String
     let house: House
     private let _alias: String?
@@ -28,6 +28,4 @@ final class Character {
         self.house = house
         _alias = nil 
     }
-    
-    
 }
