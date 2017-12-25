@@ -58,5 +58,9 @@ class HouseTests: XCTestCase {
         
         XCTAssertEqual(starkHouse.count, 2)
         
+        starkHouse.add(person: tyrion)
+        XCTAssertEqual(starkHouse.count, 2)
+
+        
     }
 }
