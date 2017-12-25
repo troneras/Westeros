@@ -24,9 +24,11 @@ final class Character {
         }
     }
     
-    init(name: String, alias: String?, house: House) {
+    init(name: String, alias: String, house: House) {
         self.name = name
         _alias = alias
         self.house = house
     }
+    
+    
 }
