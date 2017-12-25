@@ -26,7 +26,7 @@ class HouseTests: XCTestCase {
         starkSigil = Sigil(image: UIImage(), description: "Lobo Huargo")
         lannisterSigil = Sigil(image: UIImage(), description: "León Rampante")
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "¡Se acerca el invierno!")
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!")
         lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!")
         
         robb = Person(name: "Robb", alias: "El Joven Lobo", house: starkHouse)
@@ -60,7 +60,19 @@ class HouseTests: XCTestCase {
         
         starkHouse.add(person: tyrion)
         XCTAssertEqual(starkHouse.count, 2)
-
+    }
+    
+    func testHouseEquality() {
         
+        // Identidad
+        XCTAssertEqual(starkHouse, starkHouse)
+        
+        // Igualdad
+        // Casa gafada
+        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!")
+        XCTAssertEqual(jinxed, starkHouse)
+        
+        // Desigualdad
+        XCTAssertNotEqual(starkHouse, lannisterHouse)
     }
 }

@@ -48,3 +48,17 @@ final class Sigil {
     }
 }
 
+// Mark: - Proxy
+extension House {
+    var proxyForEquality: String {
+        return "\(name) \(words) \(count)"
+    }
+}
+
+// Mark: - Equatable
+extension House: Equatable {
+    static func ==(lhs: House, rhs: House) -> Bool {
+        return lhs.proxyForEquality == rhs.proxyForEquality
+    }
+}
+
