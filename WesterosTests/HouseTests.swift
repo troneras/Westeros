@@ -75,4 +75,8 @@ class HouseTests: XCTestCase {
         // Desigualdad
         XCTAssertNotEqual(starkHouse, lannisterHouse)
     }
+    
+    func testHashable() {
+        XCTAssertNotNil(robb.hashValue)
+    }
 }
