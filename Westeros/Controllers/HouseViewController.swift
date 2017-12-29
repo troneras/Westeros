@@ -24,6 +24,7 @@ class HouseViewController: UIViewController {
     init(model: House) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
+        title = model.name
     }
     
     // Chaputa de los de Cupertino relacionada con los nil
@@ -35,7 +36,7 @@ class HouseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        syncViewModel()
+        syncViewWithModel()
     }
     
     // MARK: - Sync
@@ -45,6 +46,5 @@ class HouseViewController: UIViewController {
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
         
-        title = model.name
     }
 }
