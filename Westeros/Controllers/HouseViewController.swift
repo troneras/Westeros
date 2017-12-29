@@ -40,7 +40,7 @@ class HouseViewController: UIViewController {
     // MARK: - Sync
     func syncViewModel() {
         // Model -> View
-        houseNameLabel.text = "Hoyse \(model.name)"
+        houseNameLabel.text = "House \(model.name)"
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
     }
