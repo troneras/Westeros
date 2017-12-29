@@ -77,6 +77,6 @@ class HouseTests: XCTestCase {
     }
     
     func testHashable() {
-        XCTAssertNotNil(robb.hashValue)
+        XCTAssertNotNil(starkHouse.hashValue)
     }
 }

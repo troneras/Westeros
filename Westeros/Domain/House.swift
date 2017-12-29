@@ -61,4 +61,12 @@ extension House: Equatable {
         return lhs.proxyForEquality == rhs.proxyForEquality
     }
 }
+// MARK: - Hashable
+extension House: Hashable {
+    var hashValue: Int {
+        return proxyForEquality.hashValue
+    }
+    
+    
+}
 
