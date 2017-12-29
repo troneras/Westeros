@@ -34,14 +34,17 @@ class HouseViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         syncViewModel()
     }
     
     // MARK: - Sync
-    func syncViewModel() {
+    func syncViewWithModel() {
         // Model -> View
         houseNameLabel.text = "House \(model.name)"
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
+        
+        title = model.name
     }
 }
