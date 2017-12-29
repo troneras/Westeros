@@ -21,15 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .cyan
         
-        // Creamos el modelo
+        // Creamos unos modelos
         let startkSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Lobo Huargo")
         let starkHouse = House(name: "Stark", sigil: startkSigil, words: "Se acerca el invierno!")
         
-        // Creamos el contolador
+        let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "León Rampante")
+        let lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!")
+        // Creamos los contoladores
         let starkViewController = HouseViewController(model: starkHouse)
         
+        let lannisterViewController = HouseViewController(model: lannisterHouse)
+        
+        // Creamos el combinador
+        let tabBarViewController = UITabBarController()
+        tabBarViewController.viewControllers = [starkViewController, lannisterViewController]
         // Asignamos el RootVC
-        window?.rootViewController = starkViewController
+        window?.rootViewController = tabBarViewController
         
         return true
     }
