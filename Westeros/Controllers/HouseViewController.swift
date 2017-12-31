@@ -35,7 +35,7 @@ class HouseViewController: UIViewController {
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        setupUI()
         syncViewWithModel()
     }
     
@@ -46,5 +46,23 @@ class HouseViewController: UIViewController {
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
         
+    }
+    
+    // Mark: - UI
+    func setupUI() {
+        // Button creation
+        let wiki = UIBarButtonItem(title: "Wiki", style: .plain, target: self, action: #selector(displayWiki))
+        
+        // Add button
+        navigationItem.rightBarButtonItem = wiki
+    }
+    
+    // Mark: - Navigation
+    @objc func displayWiki() {
+        // WikiViewController creation
+        let wikiViewController = WikiViewController(model: model)
+        
+        // Push
+        navigationController?.pushViewController(wikiViewController, animated: true)
     }
 }
