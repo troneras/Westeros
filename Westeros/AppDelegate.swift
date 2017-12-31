@@ -25,9 +25,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let houses = Repository.local.houses
         
         // Creamos los contoladores
-        var controllers = [UIViewController]()
-        for house in houses {
-            controllers.append(HouseViewController(model: house).wrappedInNavigation())
+        let controllers = houses.map{ (house: House) in
+            return HouseViewController(model: house)
         }
 
         // Creamos el combinador
