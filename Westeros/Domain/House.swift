@@ -16,12 +16,14 @@ final class House {
     let name: String
     let sigil: Sigil
     let words: Words
+    let wikiURL: URL
     private var _members: Members
     
-    init(name: String, sigil: Sigil, words: Words) {
+    init(name: String, sigil: Sigil, words: Words, url: URL) {
         self.name = name
         self.sigil = sigil
         self.words = words
+        self.wikiURL = url
         _members = Members()
     }
 }

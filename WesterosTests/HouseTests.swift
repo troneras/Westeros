@@ -14,6 +14,7 @@ class HouseTests: XCTestCase {
     var starkSigil: Sigil!
     var lannisterSigil: Sigil!
     
+    
     var starkHouse: House!
     var lannisterHouse: House!
     
@@ -26,8 +27,11 @@ class HouseTests: XCTestCase {
         starkSigil = Sigil(image: UIImage(), description: "Lobo Huargo")
         lannisterSigil = Sigil(image: UIImage(), description: "León Rampante")
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!")
-        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!")
+        let starkURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
+        let lannisterURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
+        
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!", url: starkURL)
+        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!", url: lannisterURL)
         
         robb = Person(name: "Robb", alias: "El Joven Lobo", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)
@@ -69,7 +73,7 @@ class HouseTests: XCTestCase {
         
         // Igualdad
         // Casa gafada
-        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!")
+        let jinxed = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!", url: URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!)
         XCTAssertEqual(jinxed, starkHouse)
         
         // Desigualdad
