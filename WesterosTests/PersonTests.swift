@@ -30,8 +30,8 @@ class PersonTests: XCTestCase {
         let starkURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
         let lannisterURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
         
-        let starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!", url: starkURL)
-        let lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!", url: lannisterURL)
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!", url: starkURL)
+        lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!", url: lannisterURL)
         
         robb = Person(name: "Robb", alias: "El Joven Lobo", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)

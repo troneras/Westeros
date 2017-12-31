@@ -23,6 +23,8 @@
 		4BAF736E1FF91EA5000B9587 /* HouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAF736C1FF91EA5000B9587 /* HouseListViewController.xib */; };
 		4BAF73711FF92A90000B9587 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */; };
 		4BAF73721FF92A90000B9587 /* MemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAF73701FF92A90000B9587 /* MemberListViewController.xib */; };
+		4BAF73741FF92FB8000B9587 /* ArrayDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF73731FF92FB8000B9587 /* ArrayDataSource.swift */; };
+		4BAF73761FF93223000B9587 /* ArrayDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF73751FF93223000B9587 /* ArrayDataSourceTest.swift */; };
 		F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */; };
 		F73EDEB01FF665B8002B25AF /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAD1FF665B8002B25AF /* lannister.jpg */; };
 		F73EDEB11FF665B8002B25AF /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAE1FF665B8002B25AF /* codeIsComing.png */; };
@@ -61,6 +63,8 @@
 		4BAF736C1FF91EA5000B9587 /* HouseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseListViewController.xib; sourceTree = "<group>"; };
 		4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		4BAF73701FF92A90000B9587 /* MemberListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListViewController.xib; sourceTree = "<group>"; };
+		4BAF73731FF92FB8000B9587 /* ArrayDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSource.swift; sourceTree = "<group>"; };
+		4BAF73751FF93223000B9587 /* ArrayDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSourceTest.swift; sourceTree = "<group>"; };
 		F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		F73EDEAD1FF665B8002B25AF /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		F73EDEAE1FF665B8002B25AF /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 				4B7F244F1FF10CCD00EB3D94 /* HouseTests.swift */,
 				4B7F24541FF1137C00EB3D94 /* PersonTests.swift */,
 				4BAF73621FF8E31B000B9587 /* RepositoryTests.swift */,
+				4BAF73751FF93223000B9587 /* ArrayDataSourceTest.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 				4BAF73681FF909D2000B9587 /* WikiViewController.xib */,
 				4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */,
 				4BAF73701FF92A90000B9587 /* MemberListViewController.xib */,
+				4BAF73731FF92FB8000B9587 /* ArrayDataSource.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -291,6 +297,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BAF73741FF92FB8000B9587 /* ArrayDataSource.swift in Sources */,
 				4BAF73611FF8E178000B9587 /* UIViewController+Additions.swift in Sources */,
 				4B7F24571FF113B900EB3D94 /* Person.swift in Sources */,
 				4B7F24521FF10D6C00EB3D94 /* House.swift in Sources */,
@@ -309,6 +316,7 @@
 			files = (
 				4B7F24501FF10CCD00EB3D94 /* HouseTests.swift in Sources */,
 				4B7F24551FF1137C00EB3D94 /* PersonTests.swift in Sources */,
+				4BAF73761FF93223000B9587 /* ArrayDataSourceTest.swift in Sources */,
 				4BAF73631FF8E31B000B9587 /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
