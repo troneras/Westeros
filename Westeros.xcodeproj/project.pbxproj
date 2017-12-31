@@ -15,6 +15,8 @@
 		4B7F24551FF1137C00EB3D94 /* PersonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F24541FF1137C00EB3D94 /* PersonTests.swift */; };
 		4B7F24571FF113B900EB3D94 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F24561FF113B900EB3D94 /* Person.swift */; };
 		4BAF73611FF8E178000B9587 /* UIViewController+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF73601FF8E178000B9587 /* UIViewController+Additions.swift */; };
+		4BAF73631FF8E31B000B9587 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF73621FF8E31B000B9587 /* RepositoryTests.swift */; };
+		4BAF73661FF8E3DC000B9587 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF73651FF8E3DC000B9587 /* Repository.swift */; };
 		F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */; };
 		F73EDEB01FF665B8002B25AF /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAD1FF665B8002B25AF /* lannister.jpg */; };
 		F73EDEB11FF665B8002B25AF /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAE1FF665B8002B25AF /* codeIsComing.png */; };
@@ -45,6 +47,8 @@
 		4B7F24541FF1137C00EB3D94 /* PersonTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonTests.swift; sourceTree = "<group>"; };
 		4B7F24561FF113B900EB3D94 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		4BAF73601FF8E178000B9587 /* UIViewController+Additions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Additions.swift"; sourceTree = "<group>"; };
+		4BAF73621FF8E31B000B9587 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
+		4BAF73651FF8E3DC000B9587 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		F73EDEAD1FF665B8002B25AF /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		F73EDEAE1FF665B8002B25AF /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
@@ -109,6 +113,7 @@
 				4B7F24461FF105AC00EB3D94 /* Info.plist */,
 				4B7F244F1FF10CCD00EB3D94 /* HouseTests.swift */,
 				4B7F24541FF1137C00EB3D94 /* PersonTests.swift */,
+				4BAF73621FF8E31B000B9587 /* RepositoryTests.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -116,6 +121,7 @@
 		4B7F24531FF10D7200EB3D94 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				4BAF73641FF8E3B0000B9587 /* Repositories */,
 				4B7F24511FF10D6C00EB3D94 /* House.swift */,
 				4B7F24561FF113B900EB3D94 /* Person.swift */,
 			);
@@ -128,6 +134,14 @@
 				4BAF73601FF8E178000B9587 /* UIViewController+Additions.swift */,
 			);
 			path = Additions;
+			sourceTree = "<group>";
+		};
+		4BAF73641FF8E3B0000B9587 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				4BAF73651FF8E3DC000B9587 /* Repository.swift */,
+			);
+			path = Repositories;
 			sourceTree = "<group>";
 		};
 		F73EDEB21FF665E7002B25AF /* Resources */ = {
@@ -261,6 +275,7 @@
 				4B7F24521FF10D6C00EB3D94 /* House.swift in Sources */,
 				4B7F24301FF105AB00EB3D94 /* AppDelegate.swift in Sources */,
 				F73EDEB51FF6662B002B25AF /* HouseViewController.swift in Sources */,
+				4BAF73661FF8E3DC000B9587 /* Repository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +285,7 @@
 			files = (
 				4B7F24501FF10CCD00EB3D94 /* HouseTests.swift in Sources */,
 				4B7F24551FF1137C00EB3D94 /* PersonTests.swift in Sources */,
+				4BAF73631FF8E31B000B9587 /* RepositoryTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
