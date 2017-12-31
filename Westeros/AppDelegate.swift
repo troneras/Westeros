@@ -36,7 +36,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let lannisterNavigationController = UINavigationController(rootViewController: lannisterViewController)
         // Creamos el combinador
         let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = [starkNavigationController, lannisterNavigationController]
+        tabBarViewController.viewControllers = [
+            lannisterViewController.wrappedInNavigation(),
+            starkViewController.wrappedInNavigation()
+        ]
         
 
         // Asignamos el RootVC
