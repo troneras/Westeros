@@ -14,9 +14,10 @@ class ArrayTableViewController<Element>: UITableViewController {
     let dataSource: ArrayDataSource<Element>
     
     // Mark: - Initialization
-    init(dataSource: ArrayDataSource<Element>, style: UITableViewStyle) {
+    init(dataSource: ArrayDataSource<Element>, title: String, style: UITableViewStyle) {
         self.dataSource = dataSource
         super.init(style: style)
+        self.title = title
         
         tableView.dataSource = self.dataSource
     }
