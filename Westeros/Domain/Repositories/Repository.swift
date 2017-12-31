@@ -13,11 +13,19 @@ final class Repository {
 }
 
 protocol HouseFactory {
+    
+    typealias Filter = (House) -> Bool
+    
     var houses: [House] { get }
     func house(named: String) -> House?
+    func houses(filteredBy: Filter) -> [House]
 }
 
 final class LocalFactory: HouseFactory {
+    func houses(filteredBy: Filter) -> [House] {
+        return Repository.local.houses.filter(filteredBy)
+    }
+    
     var houses: [House] {
         // Houses creation here
         let starkSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Lobo Huargo")
