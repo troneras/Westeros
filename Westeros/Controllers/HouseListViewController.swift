@@ -52,4 +52,15 @@ class HouseListViewController: UITableViewController {
         return cell!
     }
     
+    // Mark: - Table view delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Averiguamos la casa
+        let house = model[indexPath.row]
+        
+        // La mostramos
+        let houseViewController = HouseViewController(model: house)
+        navigationController?.pushViewController(houseViewController, animated: true)
+        
+    }
+    
 }

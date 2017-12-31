@@ -32,7 +32,7 @@ extension House {
     var count: Int {
         return _members.count
     }
-    
+   
     func add(person: Person) {
         guard person.house.name == self.name else { return }
         _members.insert(person)
