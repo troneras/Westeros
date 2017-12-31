@@ -22,23 +22,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = .cyan
         
         // Creamos unos modelos
-        let startkSigil = Sigil(image: #imageLiteral(resourceName: "codeIsComing.png"), description: "Lobo Huargo")
-        let starkHouse = House(name: "Stark", sigil: startkSigil, words: "Se acerca el invierno!")
+        let houses = Repository.local.houses
         
-        let lannisterSigil = Sigil(image: #imageLiteral(resourceName: "lannister.jpg"), description: "León Rampante")
-        let lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!")
         // Creamos los contoladores
-        let starkViewController = HouseViewController(model: starkHouse)
-        let lannisterViewController = HouseViewController(model: lannisterHouse)
+        var controllers = [HouseViewController]()
+        for house in houses {
+            controllers.append(HouseViewController(model: house))
+        }
 
+        // Creamos los Navigation Controller
+        var navigationControllers = [UINavigationController]()
+        
+        for controller in controllers {
+            navigationControllers.append(controller.wrappedInNavigation())
+        }
         // Creamos el combinador
         let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = [
-            lannisterViewController.wrappedInNavigation(),
-            starkViewController.wrappedInNavigation()
-        ]
+        tabBarViewController.viewControllers = navigationControllers
         
-
         // Asignamos el RootVC
         window?.rootViewController = tabBarViewController
         
