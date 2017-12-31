@@ -26,7 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // Creamos el combinador
         let tabBarViewController = UITabBarController()
-        tabBarViewController.viewControllers = houses.map{ HouseViewController(model: $0) }
+        tabBarViewController.viewControllers = houses.map{ HouseViewController(model: $0).wrappedInNavigation() }
         
         // Asignamos el RootVC
         window?.rootViewController = tabBarViewController
