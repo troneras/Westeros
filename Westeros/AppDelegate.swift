@@ -29,14 +29,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido!")
         // Creamos los contoladores
         let starkViewController = HouseViewController(model: starkHouse)
-        
         let lannisterViewController = HouseViewController(model: lannisterHouse)
         
         // Creamos el combinador
         let tabBarViewController = UITabBarController()
         tabBarViewController.viewControllers = [starkViewController, lannisterViewController]
+        
+        let starkNavigationController = UINavigationController(rootViewController: starkViewController)
+
         // Asignamos el RootVC
-        window?.rootViewController = tabBarViewController
+        window?.rootViewController = starkNavigationController
         
         return true
     }
