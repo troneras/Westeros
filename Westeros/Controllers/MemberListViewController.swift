@@ -1,5 +1,5 @@
 //
-//  HouseListTableViewController.swift
+//  MemberListViewController.swift
 //  Westeros
 //
 //  Created by Alexandre Freire on 31/12/2017.
@@ -8,16 +8,16 @@
 
 import UIKit
 
-class HouseListViewController: UITableViewController {
-
+class MemberListViewController: UITableViewController {
+    
     // Mark: - Properties
-    let model: [House]
+    let model: [Person]
     
     // Mark: - Initialization
-    init(model: [House]) {
+    init(model: [Person]) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        title = "Westeros"
+        title = "Members"
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -28,38 +28,26 @@ class HouseListViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cellID = "HouseCell"
-        // Descubrir cual es la casa que tenemos que mostrar
-        let house = model[indexPath.row]
+        let cellID = "MemberCell"
+        // Descubrir cual es la persona que tenemos que mostrar
+        let person = model[indexPath.row]
         
         // Crear una celda
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: cellID)
         }
-    
-        // Sincronizar house -> cell
-        cell?.imageView?.image = house.sigil.image
-        cell?.textLabel?.text = house.name
+        
+        // Sincronizar person -> cell
+        cell?.textLabel?.text = person.name
         
         return cell!
     }
-    
-    // Mark: - Table view delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Averiguamos la casa
-        let house = model[indexPath.row]
-        
-        // La mostramos
-        let houseViewController = HouseViewController(model: house)
-        navigationController?.pushViewController(houseViewController, animated: true)
-    }
-    
 }
