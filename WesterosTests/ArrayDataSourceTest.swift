@@ -22,7 +22,6 @@ class ArrayDataSourceTest: XCTestCase {
     }
 
     func testArrayDataSourceCreation() {
-        let tableView = UITableView()
         
         let dataSource = ArrayDataSource(model: [1,2,3,4,5,6]) { number, tableView in
             let cellId = "CellId"
