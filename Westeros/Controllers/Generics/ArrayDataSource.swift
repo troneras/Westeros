@@ -36,5 +36,9 @@ final class ArrayDataSource<Element>: NSObject, UITableViewDataSource {
         return _cellMaker(element, tableView)
     }
     
+    func element(at indexPath: IndexPath) -> Element{
+        return _model[indexPath.row]
+    }
+    
     
 }
