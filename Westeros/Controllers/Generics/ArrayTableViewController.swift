@@ -12,14 +12,25 @@ class ArrayTableViewController<Element>: UITableViewController {
     
     // Mark: - Properties
     let dataSource: ArrayDataSource<Element>
+    let arrayDelegate: BaseViewControllerDelegate<Element>?
     
     // Mark: - Initialization
-    init(dataSource: ArrayDataSource<Element>, title: String, style: UITableViewStyle) {
+    init(dataSource: ArrayDataSource<Element>, title: String, style: UITableViewStyle, delegate: BaseViewControllerDelegate<Element>? = nil) {
         self.dataSource = dataSource
+        self.arrayDelegate = delegate
+        
         super.init(style: style)
         self.title = title
         
         tableView.dataSource = self.dataSource
+        
+        // Asignamos las propiedades del delegate
+        self.arrayDelegate?.viewController = self
+        self.arrayDelegate?.source = self.dataSource
+        
+        // Asignamos el delegado de la tabla
+        tableView.delegate = self.arrayDelegate as? UITableViewDelegate
+        
     }
     
     required init?(coder aDecoder: NSCoder) {

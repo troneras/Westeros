@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // Creamos los controladores
         let dataSource = DataSourceRepository.houseDataSource(model: houses)
-        let houseListViewController = ArrayTableViewController(dataSource: dataSource, title: "Westeros", style: .plain).wrappedInNavigation()
+        let housesListDelegate = HousesDelegate()
+        let houseListViewController = ArrayTableViewController(dataSource: dataSource, title: "Westeros", style: .plain, delegate: housesListDelegate).wrappedInNavigation()
         
         // Asignamos el RootVC
         window?.rootViewController = houseListViewController

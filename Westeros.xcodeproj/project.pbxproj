@@ -27,7 +27,7 @@
 		4BAF73761FF93223000B9587 /* ArrayDataSourceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF73751FF93223000B9587 /* ArrayDataSourceTest.swift */; };
 		4BAF73781FF93735000B9587 /* ArrayTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF73771FF93735000B9587 /* ArrayTableViewController.swift */; };
 		4BAF737B1FF93830000B9587 /* DataSourceRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF737A1FF93830000B9587 /* DataSourceRepository.swift */; };
-		4BAF737D1FF93D0D000B9587 /* ArrayTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF737C1FF93D0D000B9587 /* ArrayTableViewDelegate.swift */; };
+		4BAF737D1FF93D0D000B9587 /* BaseViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF737C1FF93D0D000B9587 /* BaseViewControllerDelegate.swift */; };
 		4BAF737F1FF93DCB000B9587 /* DelegateRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF737E1FF93DCB000B9587 /* DelegateRepository.swift */; };
 		F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */; };
 		F73EDEB01FF665B8002B25AF /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAD1FF665B8002B25AF /* lannister.jpg */; };
@@ -71,7 +71,7 @@
 		4BAF73751FF93223000B9587 /* ArrayDataSourceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayDataSourceTest.swift; sourceTree = "<group>"; };
 		4BAF73771FF93735000B9587 /* ArrayTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTableViewController.swift; sourceTree = "<group>"; };
 		4BAF737A1FF93830000B9587 /* DataSourceRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSourceRepository.swift; sourceTree = "<group>"; };
-		4BAF737C1FF93D0D000B9587 /* ArrayTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayTableViewDelegate.swift; sourceTree = "<group>"; };
+		4BAF737C1FF93D0D000B9587 /* BaseViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewControllerDelegate.swift; sourceTree = "<group>"; };
 		4BAF737E1FF93DCB000B9587 /* DelegateRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateRepository.swift; sourceTree = "<group>"; };
 		F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		F73EDEAD1FF665B8002B25AF /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
@@ -174,7 +174,7 @@
 			children = (
 				4BAF73801FF93DD3000B9587 /* Repositories */,
 				4BAF73731FF92FB8000B9587 /* ArrayDataSource.swift */,
-				4BAF737C1FF93D0D000B9587 /* ArrayTableViewDelegate.swift */,
+				4BAF737C1FF93D0D000B9587 /* BaseViewControllerDelegate.swift */,
 				4BAF73771FF93735000B9587 /* ArrayTableViewController.swift */,
 			);
 			path = Generics;
@@ -328,7 +328,7 @@
 				4BAF73781FF93735000B9587 /* ArrayTableViewController.swift in Sources */,
 				4BAF73741FF92FB8000B9587 /* ArrayDataSource.swift in Sources */,
 				4BAF737F1FF93DCB000B9587 /* DelegateRepository.swift in Sources */,
-				4BAF737D1FF93D0D000B9587 /* ArrayTableViewDelegate.swift in Sources */,
+				4BAF737D1FF93D0D000B9587 /* BaseViewControllerDelegate.swift in Sources */,
 				4BAF73611FF8E178000B9587 /* UIViewController+Additions.swift in Sources */,
 				4B7F24571FF113B900EB3D94 /* Person.swift in Sources */,
 				4B7F24521FF10D6C00EB3D94 /* House.swift in Sources */,
