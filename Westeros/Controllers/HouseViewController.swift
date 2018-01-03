@@ -18,7 +18,7 @@ class HouseViewController: UIViewController {
     @IBOutlet weak var sigilImageView: UIImageView!
     
     // MARK: - Properties
-    let model: House
+    var model: House
     
     // MARK: - Initialization
     init(model: House) {
@@ -72,5 +72,12 @@ class HouseViewController: UIViewController {
         
         // Push
         navigationController?.pushViewController(memberListViewController, animated: true)
+    }
+}
+
+extension HouseViewController: HouseListViewControllerDelegate {
+    func houselistViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
+        self.model = house
+        syncViewWithModel()
     }
 }

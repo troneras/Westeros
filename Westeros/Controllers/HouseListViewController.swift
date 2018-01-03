@@ -8,10 +8,19 @@
 
 import UIKit
 
+protocol HouseListViewControllerDelegate: class {
+    // Should
+    // Will
+    // Did
+    func houselistViewController(_ vc: HouseListViewController, didSelectHouse: House)
+}
+
+
 class HouseListViewController: UITableViewController {
 
     // Mark: - Properties
     let model: [House]
+    weak var delegate: HouseListViewControllerDelegate?
     
     // Mark: - Initialization
     init(model: [House]) {
@@ -57,9 +66,8 @@ class HouseListViewController: UITableViewController {
         // Averiguamos la casa
         let house = model[indexPath.row]
         
-        // La mostramos
-        let houseViewController = HouseViewController(model: house)
-        navigationController?.pushViewController(houseViewController, animated: true)
+        // Avisamos al delegado
+        delegate?.houselistViewController(self, didSelectHouse: house)
     }
     
 }
