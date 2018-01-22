@@ -11,7 +11,7 @@ import UIKit
 class MemberListViewController: UITableViewController {
     
     // Mark: - Properties
-    let model: [Person]
+    var model: [Person]
     
     // Mark: - Initialization
     init(model: [Person]) {
@@ -22,6 +22,37 @@ class MemberListViewController: UITableViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // Mark: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Nos damos de alta en las notificaciones
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(houseDidChange), name: Notification.Name(HouseDidChangeNotificationName), object: nil) // Object es quien lo manda
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Baja en la notificación
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
+    // Mark: - Notifications
+    @objc func houseDidChange(notification: Notification) {
+        // Sacar el userInfo
+        let info = notification.userInfo!
+        
+        // Sacar la casa
+        let house = info[HouseKey] as? House
+        
+        // Actualizar el modelo
+        model = (house?.sortedMembers)!
+        
+        // Sincronizar las vistas
+        tableView.reloadData()
     }
     
     // MARK: - Table view data source
