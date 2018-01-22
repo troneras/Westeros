@@ -10,7 +10,7 @@ import UIKit
 
 let HouseKey = "HouseKey"
 let HouseDidChangeNotificationName = "HouseDidChange"
-
+let lastHouseKey = "LastHouseKey"
 protocol HouseListViewControllerDelegate: class {
     // Should
     // Will
@@ -22,7 +22,7 @@ protocol HouseListViewControllerDelegate: class {
 class HouseListViewController: UITableViewController {
 
     // Mark: - Properties
-    let model: [House]
+    var model: [House]
     weak var delegate: HouseListViewControllerDelegate?
     
     // Mark: - Initialization
@@ -76,6 +76,9 @@ class HouseListViewController: UITableViewController {
         let notificationCenter = NotificationCenter.default
         let notification = Notification(name: Notification.Name(HouseDidChangeNotificationName), object: self, userInfo: [HouseKey: house])
         notificationCenter.post(notification)
+        
+        // Guardamos la última casa seleccionada
+        saveLastSelectedHouse(at: indexPath.row)
     }
 }
 
@@ -84,6 +87,24 @@ extension HouseListViewController: HouseListViewControllerDelegate {
         let houseDetailViewController = HouseViewController(model: house)
         splitViewController?.showDetailViewController(houseDetailViewController, sender: nil)
     }
+}
+
+// Mark: - User Defaults
+extension HouseListViewController {
+
+    func saveLastSelectedHouse(at row: Int) {
+        let userDefaults = UserDefaults.standard
+        userDefaults.set(row, forKey: lastHouseKey)
+        userDefaults.synchronize() // Por si acaso.
+    }
     
+    func lastSelectedHouse() -> House{
+        let row = UserDefaults.standard.integer(forKey: lastHouseKey)
+        return house(at: row)
+    }
     
+    func house(at index: Int) -> House{
+        let house = model[index]
+        return house
+    }
 }

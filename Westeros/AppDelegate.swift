@@ -26,7 +26,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // Creamos los controladores
         let houseListViewController = HouseListViewController(model: houses)
-        let houseDetailViewController = HouseViewController(model: houses.first!)
+        let lastHouseSelected = houseListViewController.lastSelectedHouse()
+        let houseDetailViewController = HouseViewController(model: lastHouseSelected)
         
         // Asignamos delegados
         if UIDevice.current.userInterfaceIdiom == .pad {
