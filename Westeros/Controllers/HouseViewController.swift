@@ -24,7 +24,6 @@ class HouseViewController: UIViewController {
     init(model: House) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        title = model.name
     }
     
     // Chaputa de los de Cupertino relacionada con los nil
@@ -45,6 +44,7 @@ class HouseViewController: UIViewController {
         houseNameLabel.text = "House \(model.name)"
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
+        title = model.name
         
     }
     

@@ -16,7 +16,7 @@ class WikiViewController: UIViewController {
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
     // Mark: - Properties
-    let model: House
+    var model: House
     
     // Mark: - Initialization
     init(model: House) {
@@ -33,8 +33,38 @@ class WikiViewController: UIViewController {
         super.viewDidLoad()
         webView.navigationDelegate = self
         syncViewWithModel()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Nos damos de alta en las notificaciones
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(houseDidChange), name: Notification.Name(HouseDidChangeNotificationName), object: nil) // Object es quien lo manda
         
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Baja en la notificación
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
+    // Mark: - Notifications
+    @objc func houseDidChange(notification: Notification) {
+        // Sacar el userInfo
+        let info = notification.userInfo!
+        
+        // Sacar el personaje
+        let house = info[HouseKey] as? House
+        
+        // Actualizar el modelo
+        model = house!
+        
+        // Sincronizar las vistas
+        syncViewWithModel()
+    }
+    
     
     // Mark: - Sync
     func syncViewWithModel() {
