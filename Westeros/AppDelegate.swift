@@ -29,7 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let houseDetailViewController = HouseViewController(model: houses.first!)
         
         // Asignamos delegados
-        houseListViewController.delegate = houseDetailViewController
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            houseListViewController.delegate = houseDetailViewController
+        } else {
+            houseListViewController.delegate = houseListViewController
+        }
+        
         
         // Creamos el UISplitViewController y le asignamos los viewControllers
         let splitViewController = UISplitViewController()

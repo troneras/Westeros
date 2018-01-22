@@ -77,5 +77,13 @@ class HouseListViewController: UITableViewController {
         let notification = Notification(name: Notification.Name(HouseDidChangeNotificationName), object: self, userInfo: [HouseKey: house])
         notificationCenter.post(notification)
     }
+}
+
+extension HouseListViewController: HouseListViewControllerDelegate {
+    func houselistViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
+        let houseDetailViewController = HouseViewController(model: house)
+        splitViewController?.showDetailViewController(houseDetailViewController, sender: nil)
+    }
+    
     
 }
