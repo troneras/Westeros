@@ -33,6 +33,12 @@ class HouseViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if let navController = splitViewController?.viewControllers[0] as? UINavigationController {
+            navController.popViewController(animated: false)
+        }
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         setupUI()

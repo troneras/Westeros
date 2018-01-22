@@ -68,6 +68,13 @@ class HouseListViewController: UITableViewController {
         
         // Avisamos al delegado
         delegate?.houselistViewController(self, didSelectHouse: house)
+        
+        // Ñapa
+        if let detailViewController = delegate as? HouseViewController,
+            let detailNavigationController = detailViewController.navigationController {
+            splitViewController?.showDetailViewController(detailNavigationController, sender: nil)
+        }
+
     }
     
 }
