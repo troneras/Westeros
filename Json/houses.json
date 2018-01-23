@@ -1,1 +1,46 @@
-{"records":[{"id":6,"nombre":"Lannister","lema":"Hear me roar","image_dir":"http:\/\/146.185.137.85\/got\/web\/uploads\/images\/d2\/67\/d267bdc95d244f1e2a3639b9aaad3f45.png"},{"id":2,"nombre":"Stark","lema":"Winter is coming","image_dir":"http:\/\/146.185.137.85\/got\/web\/uploads\/images\/fc\/38\/fc38f3b8973b00b6827b5dc73df86f87.png"},{"id":7,"nombre":"Targaryen","lema":"Fire and blood","image_dir":"http:\/\/146.185.137.85\/got\/web\/uploads\/images\/78\/df\/78df4304ca3a28ad352df9c285175cf1.png"},{"id":8,"nombre":"Tyrell","lema":"Growing Strong","image_dir":"http:\/\/146.185.137.85\/got\/web\/uploads\/images\/63\/78\/6378b70b886bce5a9cdba63b7a103ed4.png"}],"total":"4"}
+[
+ {
+ "id":6,
+ "name":"Lannister",
+ "words":"Hear me roar",
+ "url" : "https://awoiaf.westeros.org/index.php/House_Lannister",
+ "sigil" : {
+ "description" : "A gold lion, on a crimson field",
+ "image" : "lannister.jpg"
+ }
+ },
+ 
+ {
+ "id":2,
+ "name":"Stark",
+ "words":"Winter is coming",
+ "url" : "https://awoiaf.westeros.org/index.php/House_Stark",
+ "sigil" : {
+ "description" : "A running grey direwolf, on an ice-white field",
+ "image" : "codeIsComing.png"
+ }
+ },
+ 
+ {
+ "id":7,
+ "name":"Targaryen",
+ "words":"Fire and blood",
+ "url" : "https://awoiaf.westeros.org/index.php/House_Targaryenhttps://awoiaf.westeros.org/index.php/House_Targaryen",
+ "sigil" : {
+ "description" : "Sable, a dragon thrice-headed gules",
+ "image" : "targaryenSmall.jpg"
+ }
+ },
+ 
+ {
+ "id":8,
+ "name":"Tyrell",
+ "words":"Growing Strong",
+ "url" : "https://awoiaf.westeros.org/index.php/House_Tyrell",
+ "sigil" : {
+ "description" : "A golden rose, on a green field",
+ "image" : ""
+ }
+ }
+ ]
+ 
