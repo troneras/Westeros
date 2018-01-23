@@ -1,0 +1,1 @@
+{"record":{"id":8,"nombre":"Tyrell","lema":"Growing Strong","image_dir":"http:\/\/146.185.137.85\/got\/web\/uploads\/images\/63\/78\/6378b70b886bce5a9cdba63b7a103ed4.png"}}

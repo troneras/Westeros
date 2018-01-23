@@ -1,0 +1,1 @@
+{"record":{"id":2,"nombre":"Stark","lema":"Winter is coming","image_dir":"http:\/\/146.185.137.85\/got\/web\/uploads\/images\/fc\/38\/fc38f3b8973b00b6827b5dc73df86f87.png"}}

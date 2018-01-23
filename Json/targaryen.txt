@@ -1,0 +1,1 @@
+{"record":{"id":7,"nombre":"Targaryen","lema":"Fire and blood","image_dir":"http:\/\/146.185.137.85\/got\/web\/uploads\/images\/78\/df\/78df4304ca3a28ad352df9c285175cf1.png"}}
