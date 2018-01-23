@@ -8,14 +8,19 @@
 
 import Foundation
 
-final class Person {
+final class Person: Decodable {
     let name: String
     let house: House
     private let _alias: String?
     
     var alias: String {
         return _alias ?? ""
-    } 
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case name, house
+        case _alias = "alias"
+    }
     
     init(name: String, alias: String? = nil, house: House) {
         self.name = name
