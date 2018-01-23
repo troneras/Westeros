@@ -24,8 +24,8 @@ class HouseTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        starkSigil = Sigil(image: UIImage(), description: "Lobo Huargo")
-        lannisterSigil = Sigil(image: UIImage(), description: "León Rampante")
+        starkSigil = Sigil(imageName: "codeIsComing", description: "Lobo Huargo")
+        lannisterSigil = Sigil(imageName: "lanister", description: "León Rampante")
         
         let starkURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
         let lannisterURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
