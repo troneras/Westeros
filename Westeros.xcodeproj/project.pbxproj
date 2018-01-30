@@ -25,6 +25,7 @@
 		4BAF736E1FF91EA5000B9587 /* HouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAF736C1FF91EA5000B9587 /* HouseListViewController.xib */; };
 		4BAF73711FF92A90000B9587 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */; };
 		4BAF73721FF92A90000B9587 /* MemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAF73701FF92A90000B9587 /* MemberListViewController.xib */; };
+		4BE7040F2020F8F700178E68 /* HouseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7040E2020F8F700178E68 /* HouseName.swift */; };
 		F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */; };
 		F73EDEB01FF665B8002B25AF /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAD1FF665B8002B25AF /* lannister.jpg */; };
 		F73EDEB11FF665B8002B25AF /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAE1FF665B8002B25AF /* codeIsComing.png */; };
@@ -65,6 +66,7 @@
 		4BAF736C1FF91EA5000B9587 /* HouseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseListViewController.xib; sourceTree = "<group>"; };
 		4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		4BAF73701FF92A90000B9587 /* MemberListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListViewController.xib; sourceTree = "<group>"; };
+		4BE7040E2020F8F700178E68 /* HouseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseName.swift; sourceTree = "<group>"; };
 		F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		F73EDEAD1FF665B8002B25AF /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		F73EDEAE1FF665B8002B25AF /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				4BAF73641FF8E3B0000B9587 /* Repositories */,
 				4B7F24511FF10D6C00EB3D94 /* House.swift */,
 				4B7F24561FF113B900EB3D94 /* Person.swift */,
+				4BE7040E2020F8F700178E68 /* HouseName.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				4B7F24521FF10D6C00EB3D94 /* House.swift in Sources */,
 				4B7F24301FF105AB00EB3D94 /* AppDelegate.swift in Sources */,
 				4BAF736D1FF91EA5000B9587 /* HouseListViewController.swift in Sources */,
+				4BE7040F2020F8F700178E68 /* HouseName.swift in Sources */,
 				F73EDEB51FF6662B002B25AF /* HouseViewController.swift in Sources */,
 				4BAF73661FF8E3DC000B9587 /* Repository.swift in Sources */,
 				4BAF73691FF909D2000B9587 /* WikiViewController.swift in Sources */,

@@ -63,6 +63,9 @@ final class LocalFactory: HouseFactory {
         return house
     }
     
+    func house(named name: HouseName) -> House? {
+        return house(named: name.rawValue)
+    }
     
 }
 
