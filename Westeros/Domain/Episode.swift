@@ -1,0 +1,67 @@
+//
+//  Episode.swift
+//  Westeros
+//
+//  Created by Alexandre Freire on 01/02/2018.
+//  Copyright © 2018 Westeros. All rights reserved.
+//
+
+import Foundation
+
+final class Episode {
+    
+    // Mark: - Properties
+    let title: String
+    let airDate: Date
+    weak var season: Season?
+    
+    // Mark: - Initialization
+    init(name: String, releaseDate: Date, season: Season) {
+        self.title = name
+        self.airDate = releaseDate
+        self.season = season
+    }
+}
+
+
+
+// Mark: - CustomStringConvertible
+extension Episode: CustomStringConvertible {
+    var description: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        let date = dateFormatter.string(from: airDate)
+        return "\(title), season: \(season?.name ?? "") air date: \(date)"
+    }
+}
+
+// Mark: - Proxy
+extension Episode {
+    var proxyForEquality: String {
+        return description
+    }
+    
+    var proxyForComparison: Date {
+        return airDate
+    }
+}
+
+// Mark: - Equatable
+extension Episode: Equatable {
+    static func ==(lhs: Episode, rhs: Episode) -> Bool {
+        return lhs.proxyForEquality == rhs.proxyForEquality
+    }
+}
+// MARK: - Hashable
+extension Episode: Hashable {
+    var hashValue: Int {
+        return proxyForEquality.hashValue
+    }
+}
+
+//MARK: - Comparable
+extension Episode: Comparable {
+    static func <(lhs: Episode, rhs: Episode) -> Bool {
+        return lhs.proxyForComparison < rhs.proxyForComparison
+    }
+}
