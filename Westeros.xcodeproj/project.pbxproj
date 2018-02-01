@@ -25,6 +25,8 @@
 		4BAF736E1FF91EA5000B9587 /* HouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAF736C1FF91EA5000B9587 /* HouseListViewController.xib */; };
 		4BAF73711FF92A90000B9587 /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */; };
 		4BAF73721FF92A90000B9587 /* MemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BAF73701FF92A90000B9587 /* MemberListViewController.xib */; };
+		4BD79A6C202394DA002531D3 /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BD79A6A202394DA002531D3 /* MemberDetailViewController.swift */; };
+		4BD79A6D202394DA002531D3 /* MemberDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4BD79A6B202394DA002531D3 /* MemberDetailViewController.xib */; };
 		4BE7040F2020F8F700178E68 /* HouseName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7040E2020F8F700178E68 /* HouseName.swift */; };
 		F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */; };
 		F73EDEB01FF665B8002B25AF /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAD1FF665B8002B25AF /* lannister.jpg */; };
@@ -66,6 +68,8 @@
 		4BAF736C1FF91EA5000B9587 /* HouseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseListViewController.xib; sourceTree = "<group>"; };
 		4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		4BAF73701FF92A90000B9587 /* MemberListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListViewController.xib; sourceTree = "<group>"; };
+		4BD79A6A202394DA002531D3 /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
+		4BD79A6B202394DA002531D3 /* MemberDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberDetailViewController.xib; sourceTree = "<group>"; };
 		4BE7040E2020F8F700178E68 /* HouseName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseName.swift; sourceTree = "<group>"; };
 		F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		F73EDEAD1FF665B8002B25AF /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				4BAF73681FF909D2000B9587 /* WikiViewController.xib */,
 				4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */,
 				4BAF73701FF92A90000B9587 /* MemberListViewController.xib */,
+				4BD79A6A202394DA002531D3 /* MemberDetailViewController.swift */,
+				4BD79A6B202394DA002531D3 /* MemberDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -279,6 +285,7 @@
 				4BAF736A1FF909D2000B9587 /* WikiViewController.xib in Resources */,
 				4B7F243A1FF105AB00EB3D94 /* LaunchScreen.storyboard in Resources */,
 				4BAF73721FF92A90000B9587 /* MemberListViewController.xib in Resources */,
+				4BD79A6D202394DA002531D3 /* MemberDetailViewController.xib in Resources */,
 				4BA09AB720175638003B4701 /* characters.json in Resources */,
 				F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */,
 				4BA09AB520174592003B4701 /* houses.json in Resources */,
@@ -308,6 +315,7 @@
 				4B7F24301FF105AB00EB3D94 /* AppDelegate.swift in Sources */,
 				4BAF736D1FF91EA5000B9587 /* HouseListViewController.swift in Sources */,
 				4BE7040F2020F8F700178E68 /* HouseName.swift in Sources */,
+				4BD79A6C202394DA002531D3 /* MemberDetailViewController.swift in Sources */,
 				F73EDEB51FF6662B002B25AF /* HouseViewController.swift in Sources */,
 				4BAF73661FF8E3DC000B9587 /* Repository.swift in Sources */,
 				4BAF73691FF909D2000B9587 /* WikiViewController.swift in Sources */,
