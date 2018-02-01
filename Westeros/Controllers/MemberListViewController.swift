@@ -55,6 +55,10 @@ class MemberListViewController: UITableViewController {
         tableView.reloadData()
     }
     
+    func person(at indexPath: IndexPath) -> Person {
+        return model[indexPath.row]
+    }
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -68,7 +72,7 @@ class MemberListViewController: UITableViewController {
         
         let cellID = "MemberCell"
         // Descubrir cual es la persona que tenemos que mostrar
-        let person = model[indexPath.row]
+        let member = person(at: indexPath)
         
         // Crear una celda
         var cell = tableView.dequeueReusableCell(withIdentifier: cellID)
@@ -77,8 +81,20 @@ class MemberListViewController: UITableViewController {
         }
         
         // Sincronizar person -> cell
-        cell?.textLabel?.text = person.name
+        cell?.textLabel?.text = member.name
         
         return cell!
     }
+    
+    // Mark: - Table View Delegate
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // Averiguamos la persona
+        let member = person(at: indexPath)
+        
+        // Pusheamos a MemberDetailViewController
+        let memberDetailViewController = MemberDetailViewController(model: member)
+        navigationController?.pushViewController(memberDetailViewController, animated: true)
+    }
+    
+    
 }
