@@ -12,10 +12,12 @@ import XCTest
 class RepositoryTests: XCTestCase {
     
     var localHouses: [House]!
+    var localSeasons: [Season]!
     
     override func setUp() {
         super.setUp()
         localHouses = Repository.local.houses
+        localSeasons = Repository.local.seasons
     }
     
     override func tearDown() {
@@ -32,9 +34,19 @@ class RepositoryTests: XCTestCase {
         XCTAssertNotNil(houses)
         XCTAssertEqual(houses.count, 4)
     }
+    
+    func testLocalRepositorySeasonsCreation() {
+        let seasons = Repository.local.seasons
+        XCTAssertNotNil(seasons)
+        XCTAssertEqual(seasons.count, 7)
+    }
  
     func testLocalRepositoryReturnsSortedArrayOfHouses() {
         XCTAssertEqual(localHouses, localHouses.sorted())
+    }
+    
+    func testLocalRepositoryReturnsSortedArrayOfSeasons() {
+        XCTAssertEqual(localSeasons, localSeasons.sorted())
     }
     
     func testLocalRepositoryReturnsHousesByNameCaseInsensitively() {
