@@ -14,15 +14,22 @@ final class Repository {
 
 protocol HouseFactory {
     
-    typealias Filter = (House) -> Bool
+    typealias HouseFilter = (House) -> Bool
+    typealias SeasonFilter = (Season) -> Bool
     
     var houses: [House] { get }
     func house(named: String) -> House?
-    func houses(filteredBy: Filter) -> [House]
+    func house(named: HouseName) -> House?
+    func houses(filteredBy: HouseFilter) -> [House]
+    func seasons(filteredBy: SeasonFilter) -> [Season]
 }
 
 final class LocalFactory: HouseFactory {
-    func houses(filteredBy: Filter) -> [House] {
+    func seasons(filteredBy: (Season) -> Bool) -> [Season] {
+        return Repository.local.seasons.filter(filteredBy)
+    }
+    
+    func houses(filteredBy: HouseFilter) -> [House] {
         return Repository.local.houses.filter(filteredBy)
     }
     
@@ -85,9 +92,10 @@ final class LocalFactory: HouseFactory {
         // Creamos los capítulos
         let episode1x01 = Episode(title: "Winter Is Coming", releaseDate: dateFormatter.date(from: "17/04/2011")!, season: firstSeason)
         let episode1x02 = Episode(title: "The Kingsroad", releaseDate: dateFormatter.date(from: "24/04/2011")!, season: firstSeason)
+        let episode1x03 = Episode(title: "Lord Snow", releaseDate: dateFormatter.date(from: "01/05/2011")!, season: firstSeason)
         
         // Los añadimos a la temporada
-        firstSeason.add(episodes: episode1x01, episode1x02)
+        firstSeason.add(episodes: episode1x01, episode1x02, episode1x03)
         
         // Creamos los capítulos
         let episode2x01 = Episode(title: "The North Remembers", releaseDate: dateFormatter.date(from: "01/04/2012")!, season: secondSeason)

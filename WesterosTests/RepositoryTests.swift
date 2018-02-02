@@ -78,4 +78,13 @@ class RepositoryTests: XCTestCase {
         XCTAssertEqual(filtered.count, 1)
     }
     
+    func testSeasonFiltering() {
+        var filtered = Repository.local.seasons(filteredBy: { $0.count == 2 })
+        XCTAssertEqual(filtered.count, 6)
+        
+        var onlyOne = Repository.local.seasons(filteredBy: { $0.count > 2 })
+        XCTAssertEqual(onlyOne.count, 1)
+
+    }
+    
 }
