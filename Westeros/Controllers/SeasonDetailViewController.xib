@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SeasonDetailViewController" customModule="Westeros" customModuleProvider="target">
+            <connections>
+                <outlet property="airDateField" destination="SpO-zV-bWh" id="wXF-Ar-swg"/>
+                <outlet property="episodesCountField" destination="si5-kd-arA" id="KnW-DF-Mbb"/>
+                <outlet property="nameField" destination="Rpa-lb-3Wn" id="x5U-sU-Yop"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rpa-lb-3Wn">
+                    <rect key="frame" x="16" y="60" width="343" height="27"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="air date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SpO-zV-bWh">
+                    <rect key="frame" x="16" y="91" width="48" height="17"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyr-dY-7SV">
+                    <rect key="frame" x="151.5" y="138" width="30" height="30"/>
+                    <state key="normal" title="See"/>
+                    <connections>
+                        <action selector="episodesDidTap:" destination="-1" eventType="touchUpInside" id="sTB-5P-O3n"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No of episodes: 10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="si5-kd-arA">
+                    <rect key="frame" x="16" y="144" width="127.5" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="si5-kd-arA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="0D7-PN-Zap"/>
+                <constraint firstItem="SpO-zV-bWh" firstAttribute="top" secondItem="Rpa-lb-3Wn" secondAttribute="bottom" constant="4" id="EEE-09-lhn"/>
+                <constraint firstItem="SpO-zV-bWh" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Fws-ZV-2py"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Rpa-lb-3Wn" secondAttribute="trailing" constant="16" id="Gif-c8-dUa"/>
+                <constraint firstItem="Gyr-dY-7SV" firstAttribute="baseline" secondItem="si5-kd-arA" secondAttribute="baseline" id="GnB-AX-Epq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SpO-zV-bWh" secondAttribute="trailing" constant="16" id="Pdu-IQ-bZS"/>
+                <constraint firstItem="si5-kd-arA" firstAttribute="top" secondItem="SpO-zV-bWh" secondAttribute="bottom" constant="36" id="g3H-uQ-YnK"/>
+                <constraint firstItem="Rpa-lb-3Wn" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="jUI-6D-h7Q"/>
+                <constraint firstItem="Rpa-lb-3Wn" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="nyS-0u-whV"/>
+                <constraint firstItem="Gyr-dY-7SV" firstAttribute="leading" secondItem="si5-kd-arA" secondAttribute="trailing" constant="8" id="o4H-H7-es4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Gyr-dY-7SV" secondAttribute="trailing" constant="8" id="x1G-pO-rXa"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="33.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
