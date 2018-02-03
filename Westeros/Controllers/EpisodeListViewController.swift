@@ -11,7 +11,7 @@ import UIKit
 class EpisodeListViewController: UITableViewController {
     
     // Mark: - Properties
-    private let model: [Episode]
+    private var model: [Episode]
     
     // Mark: - Initialization
     init(model: [Episode]) {
@@ -21,6 +21,37 @@ class EpisodeListViewController: UITableViewController {
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // Mark: - Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Nos damos de alta en las notificaciones
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(self, selector: #selector(seasonDidChange), name: Notification.Name(SeasonDidChangeNotificationName), object: nil)
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        // Baja en la notificación
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
+    // Mark: - Notifications
+    @objc func seasonDidChange(notification: Notification) {
+        // Sacar el userInfo
+        let info = notification.userInfo!
+        
+        // Sacar la season
+        guard let season = info[SeasonKey] as? Season else { return }
+        
+        // Actualizar el modelo
+        model = season.sortedEpisodes
+        
+        // Sincronizar las vistas
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
