@@ -17,6 +17,7 @@ class SeasonListViewController: UITableViewController {
     init(model: [Season]) {
         self.model = model
         super.init(style: .plain)
+        title = "GoT Seasons"
     }
     
     required init?(coder aDecoder: NSCoder) {

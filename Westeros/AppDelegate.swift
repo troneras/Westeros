@@ -23,11 +23,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Creamos unos modelos
         let houses = Repository.local.houses
+        let seasons = Repository.local.seasons
         
        // Creamos los controladores
         let houseListViewController = HouseListViewController(model: houses)
         let lastHouseSelected = houseListViewController.lastSelectedHouse()
         let houseDetailViewController = HouseViewController(model: lastHouseSelected)
+        
+        let seasonListViewController = SeasonListViewController(model: seasons)
+        let seasonDetailViewController = SeasonDetailViewController(model: seasons.first!)
         
         // Asignamos delegados
         if UIDevice.current.userInterfaceIdiom == .pad {
@@ -36,10 +40,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             houseListViewController.delegate = houseListViewController
         }
         
-        
+        // Creamos el UITabBarController
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = [houseListViewController, seasonListViewController]
         // Creamos el UISplitViewController y le asignamos los viewControllers
         let splitViewController = UISplitViewController()
-        splitViewController.viewControllers = [houseListViewController.wrappedInNavigation(), houseDetailViewController.wrappedInNavigation()]
+        splitViewController.viewControllers = [tabBarController.wrappedInNavigation(), houseDetailViewController.wrappedInNavigation()]
         
         // Asignamos el RootVC
         window?.rootViewController = splitViewController
