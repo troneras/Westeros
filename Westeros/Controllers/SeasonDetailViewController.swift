@@ -16,7 +16,7 @@ class SeasonDetailViewController: UIViewController {
     @IBOutlet weak var episodesCountField: UILabel!
     
     // Mark: - Properties
-    let model: Season
+    var model: Season
     
     // Mark: - Initialization
     init(model: Season) {
@@ -53,4 +53,11 @@ class SeasonDetailViewController: UIViewController {
         navigationController?.pushViewController(viewController, animated: true)
     }
     
+}
+
+extension SeasonDetailViewController: SeasonListViewControllerDelegate {
+    func seasonListViewController(_ vc: SeasonListViewController, didSelectSeason season: Season) {
+        model = season
+        syncModelWithView()
+    }
 }

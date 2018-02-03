@@ -8,10 +8,18 @@
 
 import UIKit
 
+let SeasonKey = "SeasonKey"
+let SeasonDidChangeNotificationName = "SeasonDidChange"
+
+protocol SeasonListViewControllerDelegate: class {
+    func seasonListViewController(_ vc: SeasonListViewController, didSelectSeason: Season)
+}
+
 class SeasonListViewController: UITableViewController {
     
     // Mark: - Properties
     let model: [Season]
+    var delegate: SeasonListViewControllerDelegate?
     
     // Mark: - Initialization
     init(model: [Season]) {
@@ -60,7 +68,19 @@ class SeasonListViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let season = model[indexPath.row]
         
-        let viewController = SeasonDetailViewController(model: season)
-        navigationController?.pushViewController(viewController, animated: true)
+        // Avisamos al delegado
+        delegate?.seasonListViewController(self, didSelectSeason: season)
+        
+        // Enviamos la misma información vía notificaciones
+        let notificationCenter = NotificationCenter.default
+        let notification = Notification(name: Notification.Name(SeasonDidChangeNotificationName), object: self, userInfo: [SeasonKey: season])
+        notificationCenter.post(notification)
+    }
+}
+
+extension SeasonListViewController: SeasonListViewControllerDelegate {
+    func seasonListViewController(_ vc: SeasonListViewController, didSelectSeason season: Season) {
+        let seasonDetailViewController = SeasonDetailViewController(model: season)
+        splitViewController?.showDetailViewController(seasonDetailViewController, sender: nil)
     }
 }
