@@ -8,6 +8,9 @@
 
 import Foundation
 
+let PersonKey = "PersonKey"
+let PersonDidCreateNotificationName = "PersonDidCreateNotificationName"
+
 final class Person: Decodable {
     let name: String
     let house: House
@@ -26,6 +29,14 @@ final class Person: Decodable {
         self.name = name
         _alias = alias
         self.house = house
+        
+        sendPersonDidCreateNotification()
+    }
+    
+    func sendPersonDidCreateNotification() {
+        let notificationCenter = NotificationCenter.default
+        let notification = Notification(name: Notification.Name(PersonDidCreateNotificationName), object: self, userInfo: [PersonKey: self])
+        notificationCenter.post(notification)
     }
 }
 
