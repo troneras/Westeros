@@ -13,7 +13,7 @@ final class Season {
     // Mark: - Properties
     let name: String
     let releaseDate: Date
-    var _episodes: Episodes
+    private var _episodes: Episodes
     
     // Mark: - Initialization
     init(name: String, releaseDate: Date, episodes: Episodes = Episodes()) {

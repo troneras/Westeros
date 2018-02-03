@@ -49,7 +49,8 @@ class SeasonDetailViewController: UIViewController {
 
     // Mark: - Actions
     @IBAction func episodesDidTap(_ sender: Any) {
-        fatalError()
+        let viewController = EpisodeListViewController(model: model.sortedEpisodes)
+        navigationController?.pushViewController(viewController, animated: true)
     }
     
 }

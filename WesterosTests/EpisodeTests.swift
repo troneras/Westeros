@@ -35,14 +35,14 @@ class EpisodeTests: XCTestCase {
         secondSeason = Season(name: "Season 2", releaseDate: dateFormatter.date(from: "01/04/2012")!)
         thirdSeason = Season(name: "Season 3", releaseDate: dateFormatter.date(from: "31/03/2013")!)
         
-        firstEpisodeOfFirstSeason = Episode(title: "1", releaseDate: dateFormatter.date(from: "17/04/2011")!, season: firstSeason)
-        secondEpisodeOfFirstSeason = Episode(title: "2", releaseDate: dateFormatter.date(from: "24/04/2011")!, season: firstSeason)
+        firstEpisodeOfFirstSeason = Episode(title: "1", number: 1, releaseDate: dateFormatter.date(from: "17/04/2011")!, season: firstSeason)
+        secondEpisodeOfFirstSeason = Episode(title: "2", number: 2, releaseDate: dateFormatter.date(from: "24/04/2011")!, season: firstSeason)
         
-        firstEpisodeOfSecondSeason = Episode(title: "1", releaseDate: dateFormatter.date(from: "01/04/2012")!, season: firstSeason)
-        secondEpisodeOfSecondSeason = Episode(title: "2", releaseDate: dateFormatter.date(from: "08/04/2012")!, season: firstSeason)
+        firstEpisodeOfSecondSeason = Episode(title: "1", number: 1, releaseDate: dateFormatter.date(from: "01/04/2012")!, season: firstSeason)
+        secondEpisodeOfSecondSeason = Episode(title: "2", number: 2, releaseDate: dateFormatter.date(from: "08/04/2012")!, season: firstSeason)
         
-        firstEpisodeOfThirdSeason = Episode(title: "1", releaseDate: dateFormatter.date(from: "31/03/2013")!, season: firstSeason)
-        secondEpisodeOfThirdSeason = Episode(title: "2", releaseDate: dateFormatter.date(from: "07/04/2013")!, season: firstSeason)
+        firstEpisodeOfThirdSeason = Episode(title: "1", number: 1, releaseDate: dateFormatter.date(from: "31/03/2013")!, season: firstSeason)
+        secondEpisodeOfThirdSeason = Episode(title: "2", number: 2, releaseDate: dateFormatter.date(from: "07/04/2013")!, season: firstSeason)
     }
     
     override func tearDown() {
@@ -63,7 +63,7 @@ class EpisodeTests: XCTestCase {
         XCTAssertEqual(firstEpisodeOfFirstSeason, firstEpisodeOfFirstSeason)
         
         // Igualdad
-        let theFirst = Episode(title: "1", releaseDate: dateFormatter.date(from: "17/04/2011")!, season: firstSeason)
+        let theFirst = Episode(title: "1", number: 1, releaseDate: dateFormatter.date(from: "17/04/2011")!, season: firstSeason)
         XCTAssertEqual(firstEpisodeOfFirstSeason, theFirst)
         
         // Desigualdad

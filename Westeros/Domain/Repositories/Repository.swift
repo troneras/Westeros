@@ -90,52 +90,52 @@ final class LocalFactory: HouseFactory {
         let seventhSeason = Season(name: "Season 7", releaseDate: dateFormatter.date(from: "16/07/2017")!)
         
         // Creamos los capítulos
-        let episode1x01 = Episode(title: "Winter Is Coming", releaseDate: dateFormatter.date(from: "17/04/2011")!, season: firstSeason)
-        let episode1x02 = Episode(title: "The Kingsroad", releaseDate: dateFormatter.date(from: "24/04/2011")!, season: firstSeason)
-        let episode1x03 = Episode(title: "Lord Snow", releaseDate: dateFormatter.date(from: "01/05/2011")!, season: firstSeason)
+        let episode1x01 = Episode(title: "Winter Is Coming", number: 1, releaseDate: dateFormatter.date(from: "17/04/2011")!, season: firstSeason)
+        let episode1x02 = Episode(title: "The Kingsroad", number: 2, releaseDate: dateFormatter.date(from: "24/04/2011")!, season: firstSeason)
+        let episode1x03 = Episode(title: "Lord Snow", number: 3, releaseDate: dateFormatter.date(from: "01/05/2011")!, season: firstSeason)
         
         // Los añadimos a la temporada
         firstSeason.add(episodes: episode1x01, episode1x02, episode1x03)
         
         // Creamos los capítulos
-        let episode2x01 = Episode(title: "The North Remembers", releaseDate: dateFormatter.date(from: "01/04/2012")!, season: secondSeason)
-        let episode2x02 = Episode(title: "The Night Lands", releaseDate: dateFormatter.date(from: "08/04/2012")!, season: secondSeason)
+        let episode2x01 = Episode(title: "The North Remembers", number: 1, releaseDate: dateFormatter.date(from: "01/04/2012")!, season: secondSeason)
+        let episode2x02 = Episode(title: "The Night Lands", number: 2, releaseDate: dateFormatter.date(from: "08/04/2012")!, season: secondSeason)
         
         // Los añadimos a la temporada
         secondSeason.add(episodes: episode2x01, episode2x02)
         
         // Creamos los capítulos
-        let episode3x01 = Episode(title: "Valar Dohaeris", releaseDate: dateFormatter.date(from: "31/03/2013")!, season: thirdSeason)
-        let episode3x02 = Episode(title: "Dark Wings, Dark Words", releaseDate: dateFormatter.date(from: "07/04/2013")!, season: thirdSeason)
+        let episode3x01 = Episode(title: "Valar Dohaeris", number: 1, releaseDate: dateFormatter.date(from: "31/03/2013")!, season: thirdSeason)
+        let episode3x02 = Episode(title: "Dark Wings, Dark Words", number: 2, releaseDate: dateFormatter.date(from: "07/04/2013")!, season: thirdSeason)
         
         // Los añadimos a la temporada
         thirdSeason.add(episodes: episode3x01, episode3x02)
         
         // Creamos los capítulos
-        let episode4x01 = Episode(title: "Two Swords", releaseDate: dateFormatter.date(from: "06/04/2014")!, season: fourthSeason)
-        let episode4x02 = Episode(title: "The Lion and the Rose", releaseDate: dateFormatter.date(from: "13/04/2014")!, season: fourthSeason)
+        let episode4x01 = Episode(title: "Two Swords", number: 1, releaseDate: dateFormatter.date(from: "06/04/2014")!, season: fourthSeason)
+        let episode4x02 = Episode(title: "The Lion and the Rose", number: 2, releaseDate: dateFormatter.date(from: "13/04/2014")!, season: fourthSeason)
         
         // Los añadimos a la temporada
         fourthSeason.add(episodes: episode4x01, episode4x02)
         
         
         // Creamos los capítulos
-        let episode5x01 = Episode(title: "The Wars to Come", releaseDate: dateFormatter.date(from: "12/04/2015")!, season: fifthSeason)
-        let episode5x02 = Episode(title: "The House of Black and White", releaseDate: dateFormatter.date(from: "19/04/2015")!, season: fifthSeason)
+        let episode5x01 = Episode(title: "The Wars to Come", number: 1, releaseDate: dateFormatter.date(from: "12/04/2015")!, season: fifthSeason)
+        let episode5x02 = Episode(title: "The House of Black and White", number: 2, releaseDate: dateFormatter.date(from: "19/04/2015")!, season: fifthSeason)
         
         // Los añadimos a la temporada
         fifthSeason.add(episodes: episode5x01, episode5x02)
         
         // Creamos los capítulos
-        let episode6x01 = Episode(title: "The Red Woman", releaseDate: dateFormatter.date(from: "24/04/2016")!, season: sixthSeason)
-        let episode6x02 = Episode(title: "Home", releaseDate: dateFormatter.date(from: "01/05/2016")!, season: sixthSeason)
+        let episode6x01 = Episode(title: "The Red Woman", number: 1, releaseDate: dateFormatter.date(from: "24/04/2016")!, season: sixthSeason)
+        let episode6x02 = Episode(title: "Home", number: 2, releaseDate: dateFormatter.date(from: "01/05/2016")!, season: sixthSeason)
         
         // Los añadimos a la temporada
         sixthSeason.add(episodes: episode6x01, episode6x02)
         
         // Creamos los capítulos
-        let episode7x01 = Episode(title: "Dragonstone", releaseDate: dateFormatter.date(from: "16/07/2017")!, season: seventhSeason)
-        let episode7x02 = Episode(title: "Stormborn", releaseDate: dateFormatter.date(from: "23/07/2017")!, season: seventhSeason)
+        let episode7x01 = Episode(title: "Dragonstone", number: 1, releaseDate: dateFormatter.date(from: "16/07/2017")!, season: seventhSeason)
+        let episode7x02 = Episode(title: "Stormborn", number: 2, releaseDate: dateFormatter.date(from: "23/07/2017")!, season: seventhSeason)
         
         // Los añadimos a la temporada
         seventhSeason.add(episodes: episode7x01, episode7x02)

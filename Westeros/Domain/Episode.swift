@@ -12,14 +12,16 @@ final class Episode {
     
     // Mark: - Properties
     let title: String
+    let number: Int
     let airDate: Date
     weak var season: Season?
     
     // Mark: - Initialization
-    init(title: String, releaseDate: Date, season: Season) {
+    init(title: String, number: Int, releaseDate: Date, season: Season) {
         self.title = title
         self.airDate = releaseDate
         self.season = season
+        self.number = number
     }
 }
 
