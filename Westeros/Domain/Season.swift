@@ -55,7 +55,7 @@ extension Season: CustomStringConvertible {
 // Mark: - Proxy
 extension Season {
     var proxyForEquality: String {
-        return description
+        return "\(name) \(releaseDate) \(count)"
     }
     
     var proxyForComparison: Date {
