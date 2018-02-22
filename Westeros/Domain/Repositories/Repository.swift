@@ -15,16 +15,19 @@ final class Repository {
 protocol HouseFactory {
     
     typealias HouseFilter = (House) -> Bool
-    typealias SeasonFilter = (Season) -> Bool
     
     var houses: [House] { get }
     func house(named: String) -> House?
     func house(named: HouseName) -> House?
     func houses(filteredBy: HouseFilter) -> [House]
+}
+
+protocol SeasonFactory {
+    typealias SeasonFilter = (Season) -> Bool
     func seasons(filteredBy: SeasonFilter) -> [Season]
 }
 
-final class LocalFactory: HouseFactory {
+final class LocalFactory: HouseFactory, SeasonFactory {
     
     init() {
         let notificationCenter = NotificationCenter.default
