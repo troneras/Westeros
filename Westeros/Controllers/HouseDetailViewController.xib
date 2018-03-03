@@ -16,7 +16,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HouseViewController" customModule="Westeros" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HouseDetailViewController" customModule="Westeros" customModuleProvider="target">
             <connections>
                 <outlet property="houseNameLabel" destination="x6J-h2-pUf" id="e6J-HV-5Uh"/>
                 <outlet property="sigilImageView" destination="Ymv-Ml-gTV" id="oo9-IK-1Qj"/>

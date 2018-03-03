@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HouseViewController: UIViewController {
+class HouseDetailViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var houseNameLabel: UILabel!
@@ -75,7 +75,7 @@ class HouseViewController: UIViewController {
     }
 }
 
-extension HouseViewController: HouseListViewControllerDelegate {
+extension HouseDetailViewController: HouseListViewControllerDelegate {
     func houselistViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
         self.model = house
         syncViewWithModel()

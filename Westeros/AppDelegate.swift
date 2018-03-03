@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var splitViewController: UISplitViewController!
     var seasonDetailViewController: SeasonDetailViewController!
-    var houseDetailViewController: HouseViewController!
+    var houseDetailViewController: HouseDetailViewController!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // Creamos los controladores
         let houseListViewController = HouseListViewController(model: houses)
         let lastHouseSelected = houseListViewController.lastSelectedHouse()
-        houseDetailViewController = HouseViewController(model: lastHouseSelected)
+        houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
         
         let seasonListViewController = SeasonListViewController(model: seasons)
         seasonDetailViewController = SeasonDetailViewController(model: seasons.first!)

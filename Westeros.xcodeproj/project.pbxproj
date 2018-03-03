@@ -43,8 +43,8 @@
 		F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */; };
 		F73EDEB01FF665B8002B25AF /* lannister.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAD1FF665B8002B25AF /* lannister.jpg */; };
 		F73EDEB11FF665B8002B25AF /* codeIsComing.png in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEAE1FF665B8002B25AF /* codeIsComing.png */; };
-		F73EDEB51FF6662B002B25AF /* HouseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73EDEB31FF6662B002B25AF /* HouseViewController.swift */; };
-		F73EDEB61FF6662B002B25AF /* HouseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEB41FF6662B002B25AF /* HouseViewController.xib */; };
+		F73EDEB51FF6662B002B25AF /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73EDEB31FF6662B002B25AF /* HouseDetailViewController.swift */; };
+		F73EDEB61FF6662B002B25AF /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F73EDEB41FF6662B002B25AF /* HouseDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,8 +98,8 @@
 		F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = targaryenSmall.jpg; sourceTree = "<group>"; };
 		F73EDEAD1FF665B8002B25AF /* lannister.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = lannister.jpg; sourceTree = "<group>"; };
 		F73EDEAE1FF665B8002B25AF /* codeIsComing.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = codeIsComing.png; sourceTree = "<group>"; };
-		F73EDEB31FF6662B002B25AF /* HouseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseViewController.swift; sourceTree = "<group>"; };
-		F73EDEB41FF6662B002B25AF /* HouseViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseViewController.xib; sourceTree = "<group>"; };
+		F73EDEB31FF6662B002B25AF /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
+		F73EDEB41FF6662B002B25AF /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,8 +212,8 @@
 			children = (
 				4BAF736B1FF91EA5000B9587 /* HouseListViewController.swift */,
 				4BAF736C1FF91EA5000B9587 /* HouseListViewController.xib */,
-				F73EDEB31FF6662B002B25AF /* HouseViewController.swift */,
-				F73EDEB41FF6662B002B25AF /* HouseViewController.xib */,
+				F73EDEB31FF6662B002B25AF /* HouseDetailViewController.swift */,
+				F73EDEB41FF6662B002B25AF /* HouseDetailViewController.xib */,
 				4BAF73671FF909D2000B9587 /* WikiViewController.swift */,
 				4BAF73681FF909D2000B9587 /* WikiViewController.xib */,
 				4BAF736F1FF92A90000B9587 /* MemberListViewController.swift */,
@@ -331,7 +331,7 @@
 				F73EDEB11FF665B8002B25AF /* codeIsComing.png in Resources */,
 				4BD79A832025BFB7002531D3 /* EpisodeListViewController.xib in Resources */,
 				4B7F24371FF105AB00EB3D94 /* Assets.xcassets in Resources */,
-				F73EDEB61FF6662B002B25AF /* HouseViewController.xib in Resources */,
+				F73EDEB61FF6662B002B25AF /* HouseDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +361,7 @@
 				4BD79A7E2024DD14002531D3 /* SeasonDetailViewController.swift in Sources */,
 				4BD79A7120239C04002531D3 /* Episode.swift in Sources */,
 				4BD79A6C202394DA002531D3 /* MemberDetailViewController.swift in Sources */,
-				F73EDEB51FF6662B002B25AF /* HouseViewController.swift in Sources */,
+				F73EDEB51FF6662B002B25AF /* HouseDetailViewController.swift in Sources */,
 				4BAF73661FF8E3DC000B9587 /* Repository.swift in Sources */,
 				4BAF73691FF909D2000B9587 /* WikiViewController.swift in Sources */,
 				4BD79A822025BFB7002531D3 /* EpisodeListViewController.swift in Sources */,
