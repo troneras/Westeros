@@ -40,7 +40,7 @@ extension Episode: CustomStringConvertible {
 // Mark: - Proxy
 extension Episode {
     var proxyForEquality: String {
-        return description
+        return "\(title) \(season?.name ?? "") \(airDate)"
     }
     
     var proxyForComparison: Date {
