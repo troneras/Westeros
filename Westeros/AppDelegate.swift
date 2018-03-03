@@ -15,6 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var splitViewController: UISplitViewController!
     var seasonDetailViewController: SeasonDetailViewController!
     var houseDetailViewController: HouseDetailViewController!
+    var houseListNavigation: UINavigationController!
+    var seasonListNavigation: UINavigationController!
+    
+    var houseDetailNavigation: UINavigationController!
+    var seasonDetailNavigation: UINavigationController!
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -44,13 +49,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             seasonListViewController.delegate = seasonListViewController
         }
         
+        // Creamos los navigations
+        houseListNavigation = houseListViewController.wrappedInNavigation()
+        seasonListNavigation = seasonListViewController.wrappedInNavigation()
+        houseDetailNavigation = houseDetailViewController.wrappedInNavigation()
+        seasonDetailNavigation = seasonDetailViewController.wrappedInNavigation()
+        
         // Creamos el UITabBarController
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [houseListViewController, seasonListViewController]
+        tabBarController.viewControllers = [houseListNavigation, seasonListNavigation]
         tabBarController.delegate = self
         // Creamos el UISplitViewController y le asignamos los viewControllers
         splitViewController = UISplitViewController()
-        splitViewController.viewControllers = [tabBarController.wrappedInNavigation(), houseDetailViewController.wrappedInNavigation(), seasonDetailViewController.wrappedInNavigation()]
+        splitViewController.viewControllers = [tabBarController,houseDetailNavigation,seasonDetailNavigation]
         
         // Asignamos el RootVC
         window?.rootViewController = splitViewController
@@ -60,13 +71,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
-        let detailNavigationController: UINavigationController
-        if type(of: viewController) == SeasonListViewController.self {
-            detailNavigationController = seasonDetailViewController.wrappedInNavigation()
+        guard let navigationController = viewController as? UINavigationController,
+            let viewController = navigationController.viewControllers.first else { return }
+        
+        let detailNavigation: UINavigationController
+        if type(of: viewController ) == SeasonListViewController.self {
+            detailNavigation = seasonDetailNavigation
         } else {
-            detailNavigationController = houseDetailViewController.wrappedInNavigation()
+            detailNavigation = houseDetailNavigation
         }
-        splitViewController.showDetailViewController(detailNavigationController, sender: nil)
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            splitViewController.showDetailViewController(detailNavigation, sender: nil)
+        }
     }
 }
-

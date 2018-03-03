@@ -81,6 +81,6 @@ class SeasonListViewController: UITableViewController {
 extension SeasonListViewController: SeasonListViewControllerDelegate {
     func seasonListViewController(_ vc: SeasonListViewController, didSelectSeason season: Season) {
         let seasonDetailViewController = SeasonDetailViewController(model: season)
-        splitViewController?.showDetailViewController(seasonDetailViewController, sender: nil)
+        navigationController?.pushViewController(seasonDetailViewController, animated: true)
     }
 }

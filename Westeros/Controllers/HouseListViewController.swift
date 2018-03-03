@@ -84,8 +84,8 @@ class HouseListViewController: UITableViewController {
 
 extension HouseListViewController: HouseListViewControllerDelegate {
     func houselistViewController(_ vc: HouseListViewController, didSelectHouse house: House) {
-        let houseDetailViewController = HouseDetailViewController(model: house).wrappedInNavigation()
-        splitViewController?.showDetailViewController(houseDetailViewController, sender: nil)
+        let houseDetailViewController = HouseDetailViewController(model: house)
+        navigationController?.pushViewController(houseDetailViewController, animated: true)
     }
 }
 
