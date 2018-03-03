@@ -33,9 +33,8 @@ class MemberListViewController: UITableViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        // Baja en la notificación
+    deinit {
+       // Baja en la notificación
         let notificationCenter = NotificationCenter.default
         notificationCenter.removeObserver(self)
     }
