@@ -54,6 +54,7 @@ class HouseTests: XCTestCase {
     }
     
     func testAddPersons() {
+        let starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!", url: URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!)
         XCTAssertEqual(starkHouse.count, 0)
         starkHouse.add(person: robb)
         
@@ -64,10 +65,14 @@ class HouseTests: XCTestCase {
         
         starkHouse.add(person: tyrion)
         XCTAssertEqual(starkHouse.count, 2)
+        
+        let _ = Person(name: "Brandon", alias: "Bran", house: starkHouse)
+        XCTAssertEqual(starkHouse.count, 3)
+
     }
     
     func testHouseEquality() {
-        
+        let starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno!", url: URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!)
         // Identidad
         XCTAssertEqual(starkHouse, starkHouse)
         
