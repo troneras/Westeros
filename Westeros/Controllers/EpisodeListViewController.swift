@@ -23,6 +23,12 @@ class EpisodeListViewController: UITableViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    deinit {
+        // Baja en la notificación
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
     // Mark: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -32,12 +38,7 @@ class EpisodeListViewController: UITableViewController {
         
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewDidDisappear(animated)
-        // Baja en la notificación
-        let notificationCenter = NotificationCenter.default
-        notificationCenter.removeObserver(self)
-    }
+    
     
     // Mark: - Notifications
     @objc func seasonDidChange(notification: Notification) {
