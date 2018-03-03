@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B203CE8204AFD7E0008FD47 /* tyrell.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B203CE7204AFD7D0008FD47 /* tyrell.jpg */; };
 		4B7F24301FF105AB00EB3D94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7F242F1FF105AB00EB3D94 /* AppDelegate.swift */; };
 		4B7F24371FF105AB00EB3D94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B7F24361FF105AB00EB3D94 /* Assets.xcassets */; };
 		4B7F243A1FF105AB00EB3D94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B7F24381FF105AB00EB3D94 /* LaunchScreen.storyboard */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B203CE7204AFD7D0008FD47 /* tyrell.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = tyrell.jpg; sourceTree = "<group>"; };
 		4B7F242C1FF105AB00EB3D94 /* Westeros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Westeros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B7F242F1FF105AB00EB3D94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B7F24361FF105AB00EB3D94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 			children = (
 				4BA09AB620175638003B4701 /* characters.json */,
 				4BA09AB420174592003B4701 /* houses.json */,
+				4B203CE7204AFD7D0008FD47 /* tyrell.jpg */,
 				F73EDEAE1FF665B8002B25AF /* codeIsComing.png */,
 				F73EDEAD1FF665B8002B25AF /* lannister.jpg */,
 				F73EDEAC1FF665B8002B25AF /* targaryenSmall.jpg */,
@@ -327,6 +330,7 @@
 				F73EDEAF1FF665B8002B25AF /* targaryenSmall.jpg in Resources */,
 				4BD79A792024DB39002531D3 /* SeasonListViewController.xib in Resources */,
 				4BA09AB520174592003B4701 /* houses.json in Resources */,
+				4B203CE8204AFD7E0008FD47 /* tyrell.jpg in Resources */,
 				4BD79A872025C096002531D3 /* EpisodeDetailViewController.xib in Resources */,
 				F73EDEB11FF665B8002B25AF /* codeIsComing.png in Resources */,
 				4BD79A832025BFB7002531D3 /* EpisodeListViewController.xib in Resources */,
