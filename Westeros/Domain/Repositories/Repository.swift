@@ -15,16 +15,21 @@ final class Repository {
 protocol HouseFactory {
     
     typealias HouseFilter = (House) -> Bool
-    typealias SeasonFilter = (Season) -> Bool
     
-    var houses: [House] { get }
     func house(named: String) -> House?
     func house(named: HouseName) -> House?
     func houses(filteredBy: HouseFilter) -> [House]
-    func seasons(filteredBy: SeasonFilter) -> [Season]
 }
 
-final class LocalFactory: HouseFactory {
+protocol SeasonFactory {
+    typealias SeasonFilter = (Season) -> Bool
+    var seasons: [Season] { get }
+
+    func seasons(filteredBy: SeasonFilter) -> [Season]
+
+}
+
+final class LocalFactory: HouseFactory, SeasonFactory {
     
     init() {
         let notificationCenter = NotificationCenter.default
@@ -58,8 +63,6 @@ final class LocalFactory: HouseFactory {
     }
     
     var houses: [House] {
-//        let houses = remoteHouses()
-//        return houses.sorted()
         // Houses creation here
         let starkSigil = Sigil(imageName: "codeIsComing.png", description: "Lobo Huargo")
         let lannisterSigil = Sigil(imageName: "lannister.jpg", description: "León Rampante")
@@ -79,11 +82,6 @@ final class LocalFactory: HouseFactory {
         let _ = Person(name: "Cersei", house: lannisterHouse)
         let _ = Person(name: "Jaime", alias: "El matarreyes", house: lannisterHouse)
         let _ = Person(name: "Daenerys", alias: "Madre de Dragones", house: targaryenHouse)
-
-        // Add characters to houses
-//        starkHouse.add(persons: arya, robb)
-//        lannisterHouse.add(persons: tyrion, cersei, jaime)
-//        targaryenHouse.add(person: dani)
 
         return [starkHouse, lannisterHouse, targaryenHouse].sorted()
         
@@ -173,51 +171,3 @@ final class LocalFactory: HouseFactory {
     
 }
 
-private extension LocalFactory {
-    func houses(fromResource resource: String, withExension ext: String) -> [House] {
-        let bundle = Bundle(for: type(of: self))
-        if let file = bundle.url(forResource: resource, withExtension: ext) {
-            do {
-                let data = try Data(contentsOf: file)
-                let jsonDecoder = JSONDecoder()
-                let houses = try! jsonDecoder.decode([House].self, from: data)
-                
-                return houses
-            } catch {
-                return []
-            }
-        }
-        return []
-    }
-    
-    func remoteHouses() -> [House] {
-        func house(named name: String, in collection: [House]) -> House {
-            return collection.first{ $0.name == name }!
-        }
-        
-        let characters = persons(fromResource: "characters", withExtension: "json")
-        var houses = Set<House>()
-        characters.forEach { houses.insert($0.house) }
-        characters.forEach{
-            let h = house(named: $0.house.name, in: Array(houses))
-            h.add(person: $0)
-        }
-        
-        return Array(houses)
-    }
-    func persons(fromResource resource: String, withExtension ext: String) -> [Person]  {
-        let bundle = Bundle(for: type(of: self))
-        if let file = bundle.url(forResource: resource, withExtension: ext) {
-            do {
-                let data = try Data(contentsOf: file)
-                let jsonDecoder = JSONDecoder()
-                let persons = try! jsonDecoder.decode([Person].self, from: data)
-                
-                return persons
-            } catch {
-                return []
-            }
-        }
-        return []
-    }
-}

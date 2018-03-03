@@ -12,19 +12,13 @@ typealias Words = String
 typealias Members = Set<Person>
 
 // MARK: - House
-final class House: Decodable {
+final class House {
     let name: String
     let sigil: Sigil
     let words: Words
     let wikiURL: URL
     private var _members: Members = Members()
-    
-    private enum CodingKeys: String, CodingKey {
-        case name
-        case sigil
-        case words
-        case wikiURL = "url"
-    }
+
     init(name: String, sigil: Sigil, words: Words, url: URL) {
         self.name = name
         self.sigil = sigil
@@ -56,7 +50,7 @@ extension House {
 }
 
 // MARK: - Sigil
-final class Sigil: Decodable {
+final class Sigil {
     let description: String
     private let imageName: String
     var image: UIImage? {
@@ -64,12 +58,7 @@ final class Sigil: Decodable {
             return UIImage(named: imageName, in: Bundle(for: type(of: self)), compatibleWith: nil)
         }
     }
-    
-    private enum CodingKeys: String, CodingKey {
-        case description
-        case imageName = "image"
-    }
-    
+        
     init(imageName: String, description: String) {
         self.imageName = imageName
         self.description = description

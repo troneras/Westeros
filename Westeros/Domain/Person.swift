@@ -11,18 +11,13 @@ import Foundation
 let PersonKey = "PersonKey"
 let PersonDidCreateNotificationName = "PersonDidCreateNotificationName"
 
-final class Person: Decodable {
+final class Person {
     let name: String
     let house: House
     private let _alias: String?
     
     var alias: String {
         return _alias ?? ""
-    }
-    
-    private enum CodingKeys: String, CodingKey {
-        case name, house
-        case _alias = "alias"
     }
     
     init(name: String, alias: String? = nil, house: House) {
