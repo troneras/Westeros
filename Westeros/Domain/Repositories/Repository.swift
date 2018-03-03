@@ -24,7 +24,6 @@ protocol HouseFactory {
 protocol SeasonFactory {
     typealias SeasonFilter = (Season) -> Bool
     var seasons: [Season] { get }
-
     func seasons(filteredBy: SeasonFilter) -> [Season]
 
 }
