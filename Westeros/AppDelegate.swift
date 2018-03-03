@@ -57,12 +57,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Creamos el UITabBarController
         let tabBarController = UITabBarController()
+        
         tabBarController.viewControllers = [houseListNavigation, seasonListNavigation]
         tabBarController.delegate = self
         // Creamos el UISplitViewController y le asignamos los viewControllers
         splitViewController = UISplitViewController()
         splitViewController.viewControllers = [tabBarController,houseDetailNavigation,seasonDetailNavigation]
         
+        tabBarController.title = "Westeros"
+        [houseDetailViewController, seasonDetailViewController].forEach {
+            $0.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
+        }
+
         // Asignamos el RootVC
         window?.rootViewController = splitViewController
         return true
